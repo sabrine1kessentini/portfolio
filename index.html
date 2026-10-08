@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sabrine Kessentini — Ingénieure Logiciel</title>
+  <meta name="description" content="Portfolio de Sabrine Kessentini, ingénieure logiciel jeune diplômée à la recherche de sa première opportunité." />
+  <meta property="og:title" content="Sabrine Kessentini — Ingénieure Logiciel" />
+  <meta property="og:description" content="Projets, certifications et parcours. Ouverte aux opportunités." />
+  <meta property="og:image" content="assets/photo.jpg" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Préchargeur -->
+  <div class="loader" id="loader">
+    <div class="loader__code"><span class="loader__bracket">&lt;</span><span class="loader__name">SK</span><span class="loader__bracket">/&gt;</span></div>
+    <div class="loader__bar"><span></span></div>
+  </div>
+
+  <div class="progress" id="progress"></div>
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <!-- Fond animé -->
+  <div class="bg" aria-hidden="true">
+    <div class="orb orb--1"></div>
+    <div class="orb orb--2"></div>
+    <div class="orb orb--3"></div>
+    <div class="grid"></div>
+  </div>
+
+  <!-- Navigation -->
+  <header class="nav" id="nav">
+    <a href="#accueil" class="nav__logo">&lt;Sabrine<span>/</span>&gt;</a>
+    <nav class="nav__links" id="navLinks">
+      <a href="#apropos">À propos</a>
+      <a href="#competences">Compétences</a>
+      <a href="#projets">Projets</a>
+      <a href="#parcours">Parcours</a>
+      <a href="#certifications">Certifs</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav__actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Changer de thème">
+        <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+      <a href="assets/CV.pdf" class="btn btn--small magnetic" download>CV ↓</a>
+      <button class="burger" id="burger" aria-label="Menu"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="accueil">
+      <div class="hero__content">
+        <div class="status reveal"><span class="status__dot"></span>Disponible pour un premier poste</div>
+        <h1 class="hero__title">
+          <span class="line"><span class="word">Salut, je suis</span></span>
+          <span class="line"><span class="word gradient-text">Sabrine</span></span>
+          <span class="line"><span class="word">Kessentini<span class="accent">.</span></span></span>
+        </h1>
+        <p class="hero__role reveal">
+          <span class="mono">&gt;</span> Ingénieure logiciel <span class="typed" id="typed"></span><span class="caret">|</span>
+        </p>
+        <p class="hero__desc reveal">
+          Jeune diplômée passionnée par la création d'applications robustes, élégantes et utiles.
+          J'aime transformer des idées en produits concrets, du back-end à l'interface.
+        </p>
+        <div class="hero__cta reveal">
+          <a href="#projets" class="btn magnetic">Voir mes projets <span class="arrow">→</span></a>
+          <a href="#contact" class="btn btn--ghost magnetic">Me contacter</a>
+        </div>
+        <div class="socials reveal">
+          <a href="https://github.com/votre-username" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg viewBox="0 0 24 24"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5z"/></svg>
+          </a>
+          <a href="https://linkedin.com/in/votre-profil" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M20.4 20.5h-3.6v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.7H9.4V9h3.4v1.6c.5-.9 1.6-1.8 3.4-1.8 3.6 0 4.3 2.4 4.3 5.5v6.2zM5.3 7.4a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2zM7.1 20.5H3.5V9h3.6v11.5zM22.2 0H1.8C.8 0 0 .8 0 1.7v20.6c0 .9.8 1.7 1.8 1.7h20.4c1 0 1.8-.8 1.8-1.7V1.7C24 .8 23.2 0 22.2 0z"/></svg>
+          </a>
+          <a href="mailto:sabrinekessentini5@gmail.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" class="stroke"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 6 10 7 10-7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Photo créative -->
+      <div class="hero__visual">
+        <div class="portrait" id="portrait">
+          <svg class="portrait__ring" viewBox="0 0 300 300" aria-hidden="true">
+            <defs><path id="circle" d="M150,150 m-130,0 a130,130 0 1,1 260,0 a130,130 0 1,1 -260,0"/></defs>
+            <text><textPath href="#circle">SOFTWARE ENGINEER • OPEN TO WORK • FULL-STACK • PROBLEM SOLVER • </textPath></text>
+          </svg>
+          <div class="portrait__blob">
+            <img src="assets/photo.jpg" alt="Portrait de Sabrine Kessentini" onerror="this.onerror=null;this.src='assets/photo-placeholder.svg'" />
+          </div>
+          <div class="float-card float-card--1"><span>🎓</span> Diplômée 2026</div>
+          <div class="float-card float-card--2"><span class="mono">&lt;/&gt;</span> Full-Stack</div>
+          <div class="float-card float-card--3"><span>🚀</span> Prête à coder</div>
+          <div class="orbit"><span class="orbit__dot"></span></div>
+          <pre class="code-snippet"><code><span class="k">const</span> <span class="v">sabrine</span> = {
+  <span class="p">passion</span>: <span class="s">"code"</span>,
+  <span class="p">status</span>: <span class="s">"open to work"</span>
+};</code></pre>
+        </div>
+      </div>
+
+      <a href="#apropos" class="scroll-hint" aria-label="Défiler"><span></span></a>
+    </section>
+
+    <!-- Bandeau défilant -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>JavaScript</span><span>✦</span><span>TypeScript</span><span>✦</span><span>React</span><span>✦</span><span>Node.js</span><span>✦</span><span>Java</span><span>✦</span><span>Spring Boot</span><span>✦</span><span>Python</span><span>✦</span><span>SQL</span><span>✦</span><span>Docker</span><span>✦</span><span>Git</span><span>✦</span>
+        <span>JavaScript</span><span>✦</span><span>TypeScript</span><span>✦</span><span>React</span><span>✦</span><span>Node.js</span><span>✦</span><span>Java</span><span>✦</span><span>Spring Boot</span><span>✦</span><span>Python</span><span>✦</span><span>SQL</span><span>✦</span><span>Docker</span><span>✦</span><span>Git</span><span>✦</span>
+      </div>
+    </div>
+
+    <!-- ============ À PROPOS ============ -->
+    <section class="section about" id="apropos">
+      <div class="section__head reveal">
+        <span class="section__num">01</span>
+        <h2>À propos de moi</h2>
+      </div>
+      <div class="about__grid">
+        <div class="about__text reveal">
+          <p class="lead">Je conçois des logiciels avec <span class="gradient-text">curiosité</span>, rigueur et le souci du détail.</p>
+          <p>Récemment diplômée en génie logiciel, j'ai développé des compétences solides en développement web full-stack, en conception de bases de données et en bonnes pratiques (tests, Git, CI/CD).</p>
+          <p>Ce que je recherche : une première opportunité dans une équipe où je pourrai apprendre vite, contribuer à des projets concrets et grandir en tant qu'ingénieure.</p>
+          <div class="about__tags">
+            <span>📍 Tunisie</span><span>🌍 Français · Anglais · Arabe</span><span>💼 Poste junior</span>
+          </div>
+        </div>
+        <div class="stats">
+          <div class="stat reveal"><div><span class="stat__num" data-count="10">0</span><span class="stat__plus">+</span></div><p>Projets réalisés</p></div>
+          <div class="stat reveal"><div><span class="stat__num" data-count="6">0</span></div><p>Certifications</p></div>
+          <div class="stat reveal"><div><span class="stat__num" data-count="2">0</span></div><p>Stages</p></div>
+          <div class="stat reveal"><div><span class="stat__num" data-count="15">0</span><span class="stat__plus">+</span></div><p>Technologies</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ COMPÉTENCES ============ -->
+    <section class="section" id="competences">
+      <div class="section__head reveal">
+        <span class="section__num">02</span>
+        <h2>Compétences</h2>
+      </div>
+      <div class="skills">
+        <div class="skill-card reveal tilt">
+          <div class="skill-card__icon">🎨</div>
+          <h3>Front-end</h3>
+          <div class="chips"><span>HTML/CSS</span><span>JavaScript</span><span>TypeScript</span><span>React</span><span>Angular</span><span>Tailwind</span></div>
+        </div>
+        <div class="skill-card reveal tilt">
+          <div class="skill-card__icon">⚙️</div>
+          <h3>Back-end</h3>
+          <div class="chips"><span>Node.js</span><span>Express</span><span>Java</span><span>Spring Boot</span><span>Python</span><span>REST API</span></div>
+        </div>
+        <div class="skill-card reveal tilt">
+          <div class="skill-card__icon">🗄️</div>
+          <h3>Bases de données</h3>
+          <div class="chips"><span>MySQL</span><span>PostgreSQL</span><span>MongoDB</span><span>Firebase</span></div>
+        </div>
+        <div class="skill-card reveal tilt">
+          <div class="skill-card__icon">🛠️</div>
+          <h3>Outils &amp; DevOps</h3>
+          <div class="chips"><span>Git/GitHub</span><span>Docker</span><span>CI/CD</span><span>Linux</span><span>Jira</span><span>Figma</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJETS ============ -->
+    <section class="section" id="projets">
+      <div class="section__head reveal">
+        <span class="section__num">03</span>
+        <h2>Projets</h2>
+      </div>
+      <div class="filters reveal" id="filters">
+        <button class="filter active" data-filter="all">Tous</button>
+        <button class="filter" data-filter="web">Web</button>
+        <button class="filter" data-filter="mobile">Mobile</button>
+        <button class="filter" data-filter="ia">IA / Data</button>
+      </div>
+      <div class="projects" id="projects">
+        <!-- Dupliquez un <article> pour ajouter un projet. data-cat = web | mobile | ia -->
+        <article class="project reveal tilt" data-cat="web">
+          <div class="project__img" style="--c1:#7c5cff;--c2:#00d4ff">
+            <span class="project__emoji">🛒</span>
+            <!-- Pour une capture d'écran : <img src="assets/projet1.png" alt="Capture du projet" /> -->
+          </div>
+          <div class="project__body">
+            <span class="project__tag">Projet de fin d'études</span>
+            <h3>Plateforme E-commerce</h3>
+            <p>Application full-stack avec authentification, panier, paiement en ligne et tableau de bord administrateur.</p>
+            <div class="chips chips--sm"><span>React</span><span>Spring Boot</span><span>MySQL</span></div>
+            <div class="project__links">
+              <a href="#" target="_blank" rel="noopener">Code ↗</a>
+              <a href="#" target="_blank" rel="noopener">Démo ↗</a>
+            </div>
+          </div>
+        </article>
+        <article class="project reveal tilt" data-cat="mobile">
+          <div class="project__img" style="--c1:#ff5c8a;--c2:#ffb347">
+            <span class="project__emoji">📱</span>
+          </div>
+          <div class="project__body">
+            <span class="project__tag">Mobile</span>
+            <h3>Application de gestion de tâches</h3>
+            <p>App mobile avec synchronisation temps réel, notifications et mode hors-ligne.</p>
+            <div class="chips chips--sm"><span>Flutter</span><span>Firebase</span></div>
+            <div class="project__links">
+              <a href="#" target="_blank" rel="noopener">Code ↗</a>
+            </div>
+          </div>
+        </article>
+        <article class="project reveal tilt" data-cat="ia">
+          <div class="project__img" style="--c1:#00d4ff;--c2:#00ff9d">
+            <span class="project__emoji">🤖</span>
+          </div>
+          <div class="project__body">
+            <span class="project__tag">IA / Data</span>
+            <h3>Chatbot intelligent</h3>
+            <p>Assistant conversationnel qui répond aux questions fréquentes à partir d'une base documentaire.</p>
+            <div class="chips chips--sm"><span>Python</span><span>NLP</span><span>FastAPI</span></div>
+            <div class="project__links">
+              <a href="#" target="_blank" rel="noopener">Code ↗</a>
+            </div>
+          </div>
+        </article>
+        <article class="project reveal tilt" data-cat="web">
+          <div class="project__img" style="--c1:#ffb347;--c2:#7c5cff">
+            <span class="project__emoji">📊</span>
+          </div>
+          <div class="project__body">
+            <span class="project__tag">Web</span>
+            <h3>Dashboard analytique</h3>
+            <p>Tableau de bord interactif pour visualiser et filtrer des données en temps réel.</p>
+            <div class="chips chips--sm"><span>Angular</span><span>Node.js</span><span>MongoDB</span></div>
+            <div class="project__links">
+              <a href="#" target="_blank" rel="noopener">Code ↗</a>
+              <a href="#" target="_blank" rel="noopener">Démo ↗</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ PARCOURS ============ -->
+    <section class="section" id="parcours">
+      <div class="section__head reveal">
+        <span class="section__num">04</span>
+        <h2>Parcours</h2>
+      </div>
+      <div class="timeline" id="timeline">
+        <div class="timeline__line"><span id="timelineFill"></span></div>
+        <div class="tl-item reveal">
+          <div class="tl-item__dot"></div>
+          <span class="tl-item__date">2023 — 2026</span>
+          <h3>Diplôme d'ingénieure en génie logiciel</h3>
+          <p class="tl-item__place">Nom de votre école / université</p>
+          <p>Spécialisation, mention, projets marquants…</p>
+        </div>
+        <div class="tl-item reveal">
+          <div class="tl-item__dot"></div>
+          <span class="tl-item__date">Fév — Juin 2026</span>
+          <h3>Stage de fin d'études — Développeuse Full-Stack</h3>
+          <p class="tl-item__place">Nom de l'entreprise</p>
+          <p>Décrivez ce que vous avez réalisé et son impact, par exemple « module utilisé par 200 personnes ».</p>
+        </div>
+        <div class="tl-item reveal">
+          <div class="tl-item__dot"></div>
+          <span class="tl-item__date">Été 2025</span>
+          <h3>Stage d'été — Développeuse Web</h3>
+          <p class="tl-item__place">Nom de l'entreprise</p>
+          <p>Missions principales et technologies utilisées.</p>
+        </div>
+        <div class="tl-item reveal">
+          <div class="tl-item__dot"></div>
+          <span class="tl-item__date">2021 — 2023</span>
+          <h3>Classes préparatoires / Licence</h3>
+          <p class="tl-item__place">Nom de l'établissement</p>
+          <p>Bases solides en mathématiques, algorithmique et programmation.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CERTIFICATIONS ============ -->
+    <section class="section" id="certifications">
+      <div class="section__head reveal">
+        <span class="section__num">05</span>
+        <h2>Certifications</h2>
+      </div>
+      <div class="certs">
+        <!-- Remplacez par vos vraies certifications + lien de vérification dans href -->
+        <a class="cert reveal" href="#" target="_blank" rel="noopener">
+          <div class="cert__badge" style="--c:#ff9900">AWS</div>
+          <div><h3>AWS Cloud Practitioner</h3><p>Amazon Web Services · 2026</p></div>
+          <span class="cert__arrow">↗</span>
+        </a>
+        <a class="cert reveal" href="#" target="_blank" rel="noopener">
+          <div class="cert__badge" style="--c:#e76f51">JAVA</div>
+          <div><h3>Java SE Programmer</h3><p>Oracle · 2025</p></div>
+          <span class="cert__arrow">↗</span>
+        </a>
+        <a class="cert reveal" href="#" target="_blank" rel="noopener">
+          <div class="cert__badge" style="--c:#4285f4">GGL</div>
+          <div><h3>Google Project Management</h3><p>Coursera · 2025</p></div>
+          <span class="cert__arrow">↗</span>
+        </a>
+        <a class="cert reveal" href="#" target="_blank" rel="noopener">
+          <div class="cert__badge" style="--c:#049fd9">CCNA</div>
+          <div><h3>CCNA: Introduction to Networks</h3><p>Cisco · 2024</p></div>
+          <span class="cert__arrow">↗</span>
+        </a>
+        <a class="cert reveal" href="#" target="_blank" rel="noopener">
+          <div class="cert__badge" style="--c:#7c5cff">PSM</div>
+          <div><h3>Professional Scrum Master I</h3><p>Scrum.org · 2025</p></div>
+          <span class="cert__arrow">↗</span>
+        </a>
+        <a class="cert reveal" href="#" target="_blank" rel="noopener">
+          <div class="cert__badge" style="--c:#00c985">FCC</div>
+          <div><h3>Responsive Web Design</h3><p>freeCodeCamp · 2024</p></div>
+          <span class="cert__arrow">↗</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section contact" id="contact">
+      <div class="contact__box reveal">
+        <span class="section__num">06</span>
+        <h2 class="contact__title">Travaillons <span class="gradient-text">ensemble</span>.</h2>
+        <p>Je suis à la recherche de ma première opportunité. Un poste, un stage, ou simplement envie d'échanger ? Mon inbox est ouverte.</p>
+        <a href="mailto:sabrinekessentini5@gmail.com" class="contact__mail">sabrinekessentini5@gmail.com</a>
+        <form class="contact__form" id="contactForm">
+          <input type="text" name="name" placeholder="Votre nom" required />
+          <input type="email" name="email" placeholder="Votre email" required />
+          <textarea name="message" rows="4" placeholder="Votre message" required></textarea>
+          <button type="submit" class="btn magnetic">Envoyer <span class="arrow">→</span></button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Sabrine Kessentini — Conçu &amp; codé avec ♥</p>
+    <a href="#accueil" class="footer__top">Haut de page ↑</a>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
